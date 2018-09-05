@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Sms_Analyzer</string>
+
+    <!-- Help Texts -->
+    <string name="title_activity_sms_category">SmsCategoryActivity</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Button textx -->
+    <string name="readsmsbtn">Analyse Messages</string>
+    <string name="viewanalysisbtn">View Analysis Report</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

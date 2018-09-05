@@ -1,0 +1,190 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    android:scrollbarStyle="insideOverlay"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.godslayer69.android.sms_analyzer.fragments.TransactionSmsReportFrag">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            card_view:cardCornerRadius="4dp"
+            card_view:cardElevation="1dp"
+            card_view:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/operator_name_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="normal"
+                    android:text="OPERATOR:"
+                    android:gravity="center"
+                    android:padding="5dp"/>
+
+                <TextView
+                    android:id="@+id/operator_name_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/operator_name_label"
+                    android:layout_alignTop="@id/operator_name_label"
+                    android:typeface="monospace"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="normal"
+                    android:gravity="center"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:id="@+id/sms_type_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/operator_name_label"
+                    android:typeface="monospace"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="normal"
+                    android:text="Message Type:"
+                    android:gravity="center"
+                    android:padding="5dp"/>
+
+                <TextView
+                    android:id="@+id/sms_type_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/operator_name_label"
+                    android:layout_toEndOf="@id/sms_type_label"
+                    android:layout_alignTop="@id/sms_type_label"
+                    android:typeface="monospace"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="normal"
+                    android:gravity="center"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:id="@+id/sms_count_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sms_type_label"
+                    android:typeface="monospace"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="normal"
+                    android:text="Message Count:"
+                    android:gravity="center"
+                    android:padding="5dp"/>
+
+                <TextView
+                    android:id="@+id/sms_count_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sms_type_label"
+                    android:layout_toEndOf="@id/sms_count_label"
+                    android:layout_alignTop="@id/sms_count_label"
+                    android:typeface="monospace"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="normal"
+                    android:gravity="center"
+                    android:padding="5dp" />
+
+                <Button
+                    android:id="@+id/expand_cardview_btn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/sms_count_label"
+                    android:background="@mipmap/ic_expand_cardview_down"
+                    android:layout_centerHorizontal="true"
+                    android:elevation="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/categorisedmessageanalysisframe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/expand_cardview_btn">
+
+                    <TextView
+                        android:id="@+id/sms_analysis_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:typeface="monospace"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="normal"
+                        android:text="Analysis Details:"
+                        android:gravity="center"
+                        android:padding="5dp"/>
+
+                    <TextView
+                        android:id="@+id/sms_analysis_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/sms_analysis_label"
+                        android:typeface="monospace"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="normal"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:ellipsize="end"/>
+
+                    <TextView
+                        android:id="@+id/sms_analysis_details_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/sms_analysis_text"
+                        android:typeface="monospace"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="normal"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:ellipsize="end"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:id="@+id/opensmslink"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/sms_analysis_details_text"
+                        android:typeface="sans"
+                        android:text="Click To See Messages"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="13sp"
+                        android:textStyle="normal"
+                        android:clickable="true"
+                        android:padding="10dp"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+</ScrollView>
